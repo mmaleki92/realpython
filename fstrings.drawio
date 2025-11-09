@@ -1,0 +1,44 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="u9gZyS1eAn8saj3S5lxG">
+    <mxGraphModel dx="1183" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-5" value="&quot;Name: {} Score: {}&quot;" style="text;whiteSpace=wrap;fontFamily=Courier New;fontColor=#4D9900;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="109" width="330" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-9" value=".format(username, score)" style="text;whiteSpace=wrap;fontFamily=Courier New;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="407" y="109" width="206.01" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-15" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fillColor=#fa6800;strokeColor=#C73500;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="113" as="sourcePoint" />
+            <mxPoint x="320" y="113" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="103" />
+              <mxPoint x="480" y="93" />
+              <mxPoint x="320" y="93" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-17" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fillColor=#fa6800;strokeColor=#C73500;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="140" as="sourcePoint" />
+            <mxPoint x="390" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="130" />
+              <mxPoint x="550" y="160" />
+              <mxPoint x="390" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-19" value="Jack" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Courier New;fontColor=#33001A;movable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="371" y="62" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="y5qB9RVijjnHHB7C_QHq-20" value="95" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Courier New;fontColor=#660033;movable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="444" y="159" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

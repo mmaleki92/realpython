@@ -11,50 +11,42 @@ The f-string was introduced in Python 3.6 to be the standard and preferred metho
 ## Joining strings and integers
 
 When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a TypeError, because the `+` operator is not supported for int  and str:
+
 ```python
->>> name = "Jane"
+>>> name = "Jack"
 >>> score = 95
->>> print("Name: " + name + " Score: " + score)
+>>> "Name: " + name + " Score: " + score
 
 Traceback (most recent call last):
     ...
 TypeError: can only concatenate str (not "int") to str
 ```
 
-You need to manually convert the number to a string using the `str()` function (named casting) to concate them.
+You need to manually convert the number to a string using the `str()` function (called casting) to concate them.
 
 ```python
->>> name = "Jane"
+>>> name = "Jack"
 >>> score = 95
->>> print("Name: " + name + " Score: " + str(score))
-"Name: Jane Score: 95"
+>>> "Name: " + name + " Score: " + str(score)
+"Name: Jack Score: 95"
 ```
 
 The `str(score)` fixed the issue by `casting` the integer 95 into the string "95".
 
-Before f-strings, the string `.format()`  method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the .format() string method:
+![alt text](fstrings.drawio.svg)
+
+Before f-strings, the `.format()` strings method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using it:
 
 ```python
-
-username = "Alex"
-
-score = 95
-
-
-
-# Using the .format() method
-
-message = "User: {} Score: {}".format(username, score)
-
-print(message)
-
+>>> name = "Jack"
+>>> score = 95
+>>> "Name: {} Score: {}".format(username, score)
+"Name: Jack Score: 95"
 ```
 
-Here, the {} act as placeholders. The .format() method then fills these placeholders with the variables username and score, in the order they are listed.
+in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the variables `username` and `score`, in the order they are listed.
 
-
-
-This works, but f-strings provide a more direct and readable way to handle this.
+This works, but who can remember the order of the placeholders? especially in a dozen of variables. Here comes the f-strings.
 
 
 
