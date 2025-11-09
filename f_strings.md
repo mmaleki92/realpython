@@ -1,7 +1,5 @@
 # F-strings
 
-
-
 <!-- F-strings provide a way to embed expressions inside string literals, using a minimal syntax. It should be noted that an f-string is really an expression evaluated at run time, not a constant value. In Python source code, an f-string is a literal string, prefixed with ‘f’, which contains expressions inside braces. The expressions are replaced with their values. Some examples are: -->
 
 An f-string, or "formatted string literal", https://peps.python.org/pep-0498/ prefixed with ‘f’, lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable. 
@@ -10,23 +8,11 @@ The f-string was introduced in Python 3.6 to be the standard and preferred metho
 
 
 
-## Joining Strings and Numbers
+## Joining strings and integers
 
+You may have seen the TypeError when you try to join a string (like "User: ") and a number (like 95) using the + operator, because the + operator is not supported for int  and str . 
 
-
-
-
-
-
-A common A common hurdle for new programmers is the TypeError you get when trying to join a string (like "User: ") and a number (like 95) using the + operator.
-
-You may have seen the `TypeError` when you try to
-
-
-
-To solve this, you must manually convert the number to a string using the `str()` function.
-
-
+To solve this, you need to manually convert the number to a string using the str() function (which is named casting)
 
 ```python
 
@@ -50,15 +36,11 @@ print(message)
 
 ```
 
-
-
-In the code above, we had to use str(score) to convert the integer 95 into the string "95".
+In the above code , we had to use str(score) to convert the integer 95 into the string "95".
 
 
 
-Before f-strings, the .format() method was another solution, but it can be verbose.
-
-
+Before f-strings, the string .format()  method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the .format() string method:
 
 ```python
 
@@ -75,8 +57,6 @@ message = "User: {} Score: {}".format(username, score)
 print(message)
 
 ```
-
-
 
 Here, the {} act as placeholders. The .format() method then fills these placeholders with the variables username and score, in the order they are listed.
 
