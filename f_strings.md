@@ -2,7 +2,7 @@
 
 <!-- F-strings provide a way to embed expressions inside string literals, using a minimal syntax. It should be noted that an f-string is really an expression evaluated at run time, not a constant value. In Python source code, an f-string is a literal string, prefixed with ‘f’, which contains expressions inside braces. The expressions are replaced with their values. Some examples are: -->
 
-An f-string, or "formatted string literal", https://peps.python.org/pep-0498/ prefixed with ‘f’, lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable. 
+An f-string, or "formatted string literal", prefixed with ‘f’, lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
 
 The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the modulo (%) operator and the string .format() method.
 
@@ -10,37 +10,29 @@ The f-string was introduced in Python 3.6 to be the standard and preferred metho
 
 ## Joining strings and integers
 
-You may have seen the TypeError when you try to join a string (like "User: ") and a number (like 95) using the + operator, because the + operator is not supported for int  and str . 
-
-To solve this, you need to manually convert the number to a string using the str() function (which is named casting)
-
+When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a TypeError, because the `+` operator is not supported for int  and str:
 ```python
+>>> name = "Jane"
+>>> score = 95
+>>> print("Name: " + name + " Score: " + score)
 
-username = "Alex"
-
-score = 95
-
-
-
-# The following line will cause a TypeError
-
-print("User: " + username + " Score: " + score)
-
-
-
-# The manual fix requires using str()
-
-message = "User: " + username + " Score: " + str(score)
-
-print(message)
-
+Traceback (most recent call last):
+    ...
+TypeError: can only concatenate str (not "int") to str
 ```
 
-In the above code , we had to use str(score) to convert the integer 95 into the string "95".
+You need to manually convert the number to a string using the `str()` function (named casting) to concate them.
 
+```python
+>>> name = "Jane"
+>>> score = 95
+>>> print("Name: " + name + " Score: " + str(score))
+"Name: Jane Score: 95"
+```
 
+The `str(score)` fixed the issue by `casting` the integer 95 into the string "95".
 
-Before f-strings, the string .format()  method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the .format() string method:
+Before f-strings, the string `.format()`  method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the .format() string method:
 
 ```python
 
