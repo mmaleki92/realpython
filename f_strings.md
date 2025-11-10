@@ -36,7 +36,7 @@ Before f-strings, the `.format()` strings method was another solution, You can f
 >>> "Name: {} Score: {}".format(name, score)
 "Name: Jack Score: 95"
 ```
-In this example, the curly braces {} act as placeholders. The .format() method then fills these placeholders with the values from the name and score variables, in the order they are listed.
+In this example, the curly braces `{}` act as placeholders. The `.format()` method then fills these placeholders with the values from the name and score variables, in the order they are listed.
 
 This works, but keeping track of the placeholder order can get confusing, especially when you have many variables. Here come f-strings.
 
