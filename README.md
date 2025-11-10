@@ -3,3 +3,5 @@
 - A short explanation of the F-string in Python.
 
 [F-string markdown file](f_strings.md)
+
+> The tutorial was done for a light screen.
