@@ -24,7 +24,7 @@ In this example, you need to convert the number to a string using the `str()` fu
 >>> "Name: " + name + " Score: " + str(score)
 "Name: Jack Score: 95"
 ```
-When you cast the integer 95 into a string "95" using the `str(score)` the two operands became strings and the problem is solved.
+In this example, when you cast the integer 95 into a string "95" using the `str(score)` the two operands became strings and the now you can concate them without `TypeError`.
 
 ![alt text](fstrings.drawio.svg)
 
@@ -36,10 +36,9 @@ Before f-strings, the `.format()` strings method was another solution, You can f
 >>> "Name: {} Score: {}".format(name, score)
 "Name: Jack Score: 95"
 ```
+In this example, the curly braces {} act as placeholders. The .format() method then fills these placeholders with the values from the name and score variables, in the order they are listed.
 
-in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the values of the variables `name` and `score`, in the order they are listed.
-
-This works, but who can remember the order of the placeholders? especially in a dozen of variables. Here comes the f-strings.
+This works, but keeping track of the placeholder order can get confusing, especially when you have many variables. Here come f-strings.
 
 ## What Are F-Strings?
 
