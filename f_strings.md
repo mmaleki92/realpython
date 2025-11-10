@@ -1,4 +1,4 @@
-An f-string (or "formatted string literal") lets you embed variables and expressions directly into a string, making your code more readable [PEP0498]. Introduced in Python 3.6, they are the preferred way to format strings in modern Python, replacing older methods like the `modulo (%)` operator and `.format()`.
+An f-string (or "formatted string literal") lets you embed variables and expressions directly into a string, making your code more readable [PEP0498](https://peps.python.org/pep-0498/). Introduced in Python 3.6, they are the preferred way to format strings in modern Python, replacing older methods like the `modulo (%)` operator and `.format()`.
 
 ## Joining Strings And Integers
 
