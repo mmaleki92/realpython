@@ -96,8 +96,7 @@ Here, :.2f means "format as a fixed-point number (f) with 2 decimal places (.2).
 >>> f"The value of pi is approximately {pi:.2f}"
 'The value of pi is approximately 3.14'
 ```
-
-This code rounds pi to 3.14 and ensures the price also displays two decimal places (49.90), which is ideal for currency.
+In this example, by using the `.2f` you rounded pi to 3.14
 
 ## Handling Literal Braces
 
