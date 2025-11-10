@@ -5,8 +5,7 @@ The f-string was introduced in Python 3.6 to be the standard and preferred metho
 
 ## Joining strings and integers
 
-When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a `TypeError`, because the `+` operator is not supported for concatenation of `int`  and `str`:
-
+When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a `TypeError`. This happens because the `+` operator is not supported for combining int and str types:
 ```python
 >>> name = "Jack"
 >>> score = 95
@@ -16,8 +15,9 @@ Traceback (most recent call last):
     ...
 TypeError: can only concatenate str (not "int") to str
 ```
+As the traceback shows, Python raised a `TypeError`. It's telling you exactly what went wrong: you can only concatenate a str to another str, but it found an int (your score variable).
 
-In this example, you need to convert the number to a string using the `str()` function (called casting) so you can concate them.
+To fix this, you need to manually convert the number to a string using the `str()` function. This process is often called "casting".
 
 ```python
 >>> name = "Jack"
@@ -25,7 +25,7 @@ In this example, you need to convert the number to a string using the `str()` fu
 >>> "Name: " + name + " Score: " + str(score)
 "Name: Jack Score: 95"
 ```
-In this example, when you cast the integer 95 into a string "95" using the `str(score)` the two operands became strings and the now you can concate them without `TypeError`.
+This works! By wrapping score with str(), you turned the integer 95 into the string "95". Now, Python is only joining strings, and the + operator can combine them all without an error.
 
 ![alt text](fstrings.drawio.svg)
 
