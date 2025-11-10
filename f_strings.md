@@ -73,4 +73,4 @@ This allows you to perform calculations or modifications inside the string itsel
 "Item: Laptop - Total: $2400"
 ```
 
-In this example, Python first ran `item_name.upper()` to get `'Laptop'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
+In this example, Python retrived the value of the `item_name` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
