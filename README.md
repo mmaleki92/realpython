@@ -2,4 +2,4 @@
 
 - A short explanation of the F-string in Python.
 
-[text](f_strings.md)
+[F-string link to markdown file](f_strings.md)
