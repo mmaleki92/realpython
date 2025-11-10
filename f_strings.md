@@ -4,7 +4,7 @@
 
 An f-string, or "formatted string literal" lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
 
-The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the modulo (%) operator and the string .format() method.
+The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the `modulo (%)` operator and the string `.format()` method.
 
 
 
@@ -35,7 +35,7 @@ The `str(score)` fixed the issue by `casting` the integer 95 into the string "95
 
 ![alt text](fstrings.drawio.svg)
 
-Before f-strings, the `.format()` strings method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using it:
+Before f-strings, the `.format()` strings method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the `.format()` string method:
 
 ```python
 >>> name = "Jack"
@@ -44,7 +44,7 @@ Before f-strings, the `.format()` strings method was another solution, but it ca
 "Name: Jack Score: 95"
 ```
 
-in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the variables `username` and `score`, in the order they are listed.
+in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the values of the variables `username` and `score`, in the order they are listed.
 
 This works, but who can remember the order of the placeholders? especially in a dozen of variables. Here comes the f-strings.
 
@@ -54,8 +54,7 @@ An f-string is a string literal prefixed with the letter f or F. This prefix tel
 
 When Python sees these, it evaluates the expression inside the braces and automatically handles the type conversion for you.
 
-Let's rewrite our example using an f-string.
-
+You can rewrite the previous example using an f-string:
 <!-- use the you correctly here -->
 ```python
 >>> username = "Jack"
@@ -75,18 +74,16 @@ This allows you to perform calculations or modifications inside the string itsel
 
 ```python
 >>> item_name = "laptop"
-
 >>> quantity = 2
-
 >>> price_per_item = 1200
 
 >>> f"Item: {item_name.upper()} - Total: ${quantity * price_per_item}"
-
+"Item: LAPTOP - Total: $2400"
 ```
 
-As you can see, Python first ran item_name.upper() to get 'LAPTOP' and calculated 2 * 1200 to get 2400 before inserting them into the final string.
+In this example, Python first ran `item_name.upper()` to get `'LAPTOP'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
 
-Controlling Format with Specifiers
+## Controlling Format with Specifiers
 
 One of the most useful features of f-strings is the ability to control the formatting of the output. You can do this by adding a colon (:) after the expression, followed by a "format specifier."
 
@@ -96,14 +93,13 @@ Here, :.2f means "format as a fixed-point number (f) with 2 decimal places (.2).
 
 ```python
 >>> pi = 3.14159265
->>> price = 49.9
 >>> f"The value of pi is approximately {pi:.2f}"
->>> f"The total price is ${price:.2f}"
+'The value of pi is approximately 3.14'
 ```
 
 This code rounds pi to 3.14 and ensures the price also displays two decimal places (49.90), which is ideal for currency.
 
-Handling Literal Braces
+## Handling Literal Braces
 
 If you need to include literal curly braces {} in your f-string (for example, if you are printing a dictionary), you can do so by "doubling them up."
 
