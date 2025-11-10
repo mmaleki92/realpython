@@ -2,7 +2,7 @@ An f-string (or "formatted string literal") lets you embed variables and express
 
 ## Joining Strings And Integers
 
-When you try to join a string and a number with the `+` operator causes a `TypeError` because `+` doesn't support combining int and str types:
+Trying to join a string and a number with the `+` operator causes a `TypeError` because `+` doesn't support combining int and str types:
 ```python
 >>> name = "Jack"
 >>> score = 95
@@ -12,7 +12,7 @@ Traceback (most recent call last):
     ...
 TypeError: can only concatenate str (not "int") to str
 ```
-As the traceback shows,  It's telling you that Python can only concatenate a `str` to another `str`, not an `int`.
+As the traceback shows,  it's telling you that Python can only concatenate a `str` to another `str`, not an `int`.
 
 To fix this, you can manually convert the number to a string using `str()`, a process called "casting":
 
@@ -22,7 +22,7 @@ To fix this, you can manually convert the number to a string using `str()`, a pr
 >>> "Name: " + name + " Score: " + str(score)
 "Name: Jack Score: 95"
 ```
-This works because by wrapping `score` with `str()`, you turned the integer 95 into the string "95". allowing Python to concatenate only strings without raising a `TypeError`.
+This works because by wrapping `score` with `str()`, you turned the integer 95 into the string "95", allowing Python to concatenate only strings without raising a `TypeError`.
 
 ![alt text](fstrings.drawio.svg)
 
@@ -43,14 +43,13 @@ This works, but keeping track of the placeholder order can get confusing, especi
 
 ## What Are F-Strings?
 
-An f-string is a string literal prefixed with the letter f or F. This prefix tells Python to look inside the string for special expressions enclosed in curly braces `{}`, and When it see the `{}`, it evaluates the expression inside the braces and automatically handles the type conversion.
+An f-string is a string literal prefixed with the letter f or F. This prefix tells Python to look inside the string for special expressions enclosed in curly braces `{}`, and when it sees the `{}`, it evaluates the expression inside the braces and automatically handles the type conversion.
 
 You can rewrite the previous example using an f-string:
 ```python
 >>> name = "Jack"
 >>> score = 95
-
->>> f"User: {name} Score: {score}"
+>>> f"Name: {name} Score: {score}"
 "Name: Jack Score: 95"
 ```
 Notice you didn't need `str(score)`. The f-string handled the conversion automatically. The code is much cleaner because the variables are placed directly inside the string.
@@ -65,8 +64,7 @@ This allows you to perform calculations or modifications inside the string itsel
 >>> item_name = "Laptop"
 >>> quantity = 2
 >>> price_per_item = 1200
-
 >>> f"Item: {item_name} - Total: ${quantity * price_per_item}"
 "Item: Laptop - Total: $2400"
 ```
-The f-string evaluated the expression ‍‍‍`quantity * price_per_item` and inserted the result, `2400`, directly into the final string.
+The f-string evaluated the expression `quantity * price_per_item` and inserted the result, `2400`, directly into the final string.
