@@ -1,7 +1,3 @@
-# F-strings
-
-<!-- F-strings provide a way to embed expressions inside string literals, using a minimal syntax. It should be noted that an f-string is really an expression evaluated at run time, not a constant value. In Python source code, an f-string is a literal string, prefixed with ‘f’, which contains expressions inside braces. The expressions are replaced with their values. Some examples are: -->
-
 An f-string, or "formatted string literal" lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
 
 The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the `modulo (%)` operator and the string `.format()` method.
@@ -55,7 +51,6 @@ An f-string is a string literal prefixed with the letter f or F. This prefix tel
 When Python sees these, it evaluates the expression inside the braces and automatically handles the type conversion for you.
 
 You can rewrite the previous example using an f-string:
-<!-- use the you correctly here -->
 ```python
 >>> username = "Jack"
 >>> score = 95
@@ -64,7 +59,7 @@ You can rewrite the previous example using an f-string:
 "Name: Jack Score: 95"
 ```
 
-Notice that you don't need to use `str(score)`. The f-string processor saw the integer variable score and converted it to a string for you. This results in cleaner code that is more readable because the variables are placed directly where their values will appear.
+You don't need to use `str(score)`. The f-string processor saw the integer variable score and converted it to a string for you. This results in cleaner code that is more readable because the variables are placed directly where their values will appear.
 
 ## Using Expressions Inside F-Strings
 
@@ -83,21 +78,6 @@ This allows you to perform calculations or modifications inside the string itsel
 
 In this example, Python first ran `item_name.upper()` to get `'LAPTOP'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
 
-## Controlling Format with Specifiers
-
-One of the most useful features of f-strings is the ability to control the formatting of the output. You can do this by adding a colon (:) after the expression, followed by a "format specifier."
-
-A very common use case is controlling the number of decimal places for a float (a number with a decimal). This is critical for displaying prices.
-
-Here, :.2f means "format as a fixed-point number (f) with 2 decimal places (.2)."
-
-```python
->>> pi = 3.14159265
->>> f"The value of pi is approximately {pi:.2f}"
-'The value of pi is approximately 3.14'
-```
-In this example, by using the `.2f` you rounded pi to 3.14
-
 ## Handling Literal Braces
 
 If you need to include literal curly braces {} in your f-string (for example, if you are printing a dictionary), you can do so by "doubling them up."
@@ -106,11 +86,3 @@ If you need to include literal curly braces {} in your f-string (for example, if
 >>> item = "dictionary"
 >>> f"A Python {item} is created with {{}}."
 ```
-
-This code will output: A Python dictionary is created with {}. The {{ is converted to a single { and }} is converted to a single }.
-
-## Conclusion
-
-F-strings streamline the process of embedding data into strings. They solve the common TypeError problem by handling type conversions automatically, allow you to embed simple expressions, and provide a powerful way to control output format.
-
-For new Python code (version 3.6 and higher), f-strings are the recommended approach for string formatting.
