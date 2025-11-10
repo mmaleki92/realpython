@@ -22,7 +22,7 @@ To fix this, you can manually convert the number to a string using `str()`, a pr
 >>> "Name: " + name + " Score: " + str(score)
 "Name: Jack Score: 95"
 ```
-This works because By wrapping `score` with `str()`, you turned the integer 95 into the string "95". allowing Python to concatenate only strings without raising a `TypeError`.
+This works because by wrapping `score` with `str()`, you turned the integer 95 into the string "95". allowing Python to concatenate only strings without raising a `TypeError`.
 
 ![alt text](fstrings.drawio.svg)
 
