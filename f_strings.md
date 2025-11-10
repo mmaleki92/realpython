@@ -1,11 +1,11 @@
 An f-string, or "formatted string literal" lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
 
-The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the `modulo (%)` operator and the string `.format()` method.
+The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the `modulo (%)` operator and the string method `.format()`.
 
 
 ## Joining strings and integers
 
-When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a TypeError, because the `+` operator is not supported for int  and str:
+When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a `TypeError`, because the `+` operator is not supported for concatenation of `int`  and `str`:
 
 ```python
 >>> name = "Jack"
@@ -16,8 +16,7 @@ Traceback (most recent call last):
     ...
 TypeError: can only concatenate str (not "int") to str
 ```
-
-You need to manually convert the number to a string using the `str()` function (called casting) to concate them.
+In this example, you need to convert the number to a string using the `str()` function (called casting) to concate them.
 
 ```python
 >>> name = "Jack"
@@ -25,8 +24,7 @@ You need to manually convert the number to a string using the `str()` function (
 >>> "Name: " + name + " Score: " + str(score)
 "Name: Jack Score: 95"
 ```
-
-The `str(score)` fixed the issue by `casting` the integer 95 into the string "95".
+When you cast the integer 95 into a string "95" using the `str(score)` the two operands became strings and the problem is solved.
 
 ![alt text](fstrings.drawio.svg)
 
