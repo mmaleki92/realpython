@@ -3,7 +3,6 @@ An f-string, or "formatted string literal" lets you embed variables and expressi
 The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the `modulo (%)` operator and the string `.format()` method.
 
 
-
 ## Joining strings and integers
 
 When you try to join a string (like "Name: ") and a number (like 95) using the `+` operator, you will get a TypeError, because the `+` operator is not supported for int  and str:
@@ -31,7 +30,7 @@ The `str(score)` fixed the issue by `casting` the integer 95 into the string "95
 
 ![alt text](fstrings.drawio.svg)
 
-Before f-strings, the `.format()` strings method was another solution, but it can be verbose and lacks the flexibility of f-strings. You can format the previous code using the `.format()` string method:
+Before f-strings, the `.format()` strings method was another solution, You can format the previous code using the `.format()` string method:
 
 ```python
 >>> name = "Jack"
@@ -68,21 +67,13 @@ The curly braces in an f-string are not limited to just variables. You can place
 This allows you to perform calculations or modifications inside the string itself.
 
 ```python
->>> item_name = "laptop"
+>>> item_name = "Laptop"
 >>> quantity = 2
 >>> price_per_item = 1200
 
->>> f"Item: {item_name.upper()} - Total: ${quantity * price_per_item}"
-"Item: LAPTOP - Total: $2400"
+>>> f"Item: {item_name} - Total: ${quantity * price_per_item}"
+"Item: Laptop - Total: $2400"
 ```
 
-In this example, Python first ran `item_name.upper()` to get `'LAPTOP'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
+In this example, Python first ran `item_name.upper()` to get `'Laptop'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
 
-## Handling Literal Braces
-
-If you need to include literal curly braces {} in your f-string (for example, if you are printing a dictionary), you can do so by "doubling them up."
-
-```python
->>> item = "dictionary"
->>> f"A Python {item} is created with {{}}."
-```
