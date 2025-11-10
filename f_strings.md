@@ -35,11 +35,11 @@ Before f-strings, the `.format()` strings method was another solution, You can f
 ```python
 >>> name = "Jack"
 >>> score = 95
->>> "Name: {} Score: {}".format(username, score)
+>>> "Name: {} Score: {}".format(name, score)
 "Name: Jack Score: 95"
 ```
 
-in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the values of the variables `username` and `score`, in the order they are listed.
+in this example, you embed the values of the variables into the curly braces `{}` which are acting as placeholders. The `format()` method then fills your placeholders with the values of the variables `name` and `score`, in the order they are listed.
 
 This works, but who can remember the order of the placeholders? especially in a dozen of variables. Here comes the f-strings.
 
@@ -51,10 +51,10 @@ When Python sees these, it evaluates the expression inside the braces and automa
 
 You can rewrite the previous example using an f-string:
 ```python
->>> username = "Jack"
+>>> name = "Jack"
 >>> score = 95
 
->>> f"User: {username} Score: {score}"
+>>> f"User: {name} Score: {score}"
 "Name: Jack Score: 95"
 ```
 
@@ -76,4 +76,3 @@ This allows you to perform calculations or modifications inside the string itsel
 ```
 
 In this example, Python first ran `item_name.upper()` to get `'Laptop'` and calculated `2 * 1200` to get `2400` before inserting them into your final string.
-
