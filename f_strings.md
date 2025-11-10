@@ -2,7 +2,7 @@
 
 <!-- F-strings provide a way to embed expressions inside string literals, using a minimal syntax. It should be noted that an f-string is really an expression evaluated at run time, not a constant value. In Python source code, an f-string is a literal string, prefixed with ‘f’, which contains expressions inside braces. The expressions are replaced with their values. Some examples are: -->
 
-An f-string, or "formatted string literal", prefixed with ‘f’, lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
+An f-string, or "formatted string literal" lets you embed variables and expressions directly inside a string, replacing them with their values, making your code cleaner and more readable [[PEP0498]](https://peps.python.org/pep-0498).
 
 The f-string was introduced in Python 3.6 to be the standard and preferred method for string formatting in modern Python after the modulo (%) operator and the string .format() method.
 
