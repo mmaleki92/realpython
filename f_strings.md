@@ -1,6 +1,6 @@
 An f-string (or "formatted string literal") lets you embed variables and expressions directly into a string, making your code more readable [PEP0498]. Introduced in Python 3.6, they are the preferred way to format strings in modern Python, replacing older methods like the `modulo (%)` operator and `.format()`.
 
-## Joining strings and integers
+## Joining Strings And Integers
 
 When you try to join a string and a number with the `+` operator causes a `TypeError` because `+` doesn't support combining int and str types:
 ```python
@@ -26,7 +26,7 @@ This works because By wrapping `score` with `str()`, you turned the integer 95 i
 
 ![alt text](fstrings.drawio.svg)
 
-## using the `.format()` method
+## Using the `.format()` Method
 Before f-strings, the `.format()` string method was another solution.
 With this method, you place curly braces `{}` in your string to act as placeholders. Then, you call the `.format()` method on the string itself, passing in the variables you want to insert.
 
